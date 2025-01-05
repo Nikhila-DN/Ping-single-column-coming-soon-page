@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: "Libre Franklin", serif;
+}
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+// Colors
+$Blue: hsl(223, 87%, 63%);
+$PaleBlue: hsl(223, 100%, 88%);
+$LightRed: hsl(354, 100%, 66%);
+$Gray: hsl(0, 0%, 59%);
+$VeryDarkBlue: hsl(209, 33%, 12%);
+
+// Font Sizes
+$Small: 16px;
+$Medium: 20px;
+$Large: 24px;
+
+// Font Weights
+
+$Thin: 300;
+$SemiBold: 600;
+$Bold: 700;
+
+// Flex Custom Class
+
+%CustomFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+// Main Styling
+
+main {
+  @extend %CustomFlex;
+  gap: 2.5rem;
+  margin-block: 1rem;
+  width: 100%;
+  // Header Styling
+  > header {
+    @extend %CustomFlex;
+    gap: 2rem;
+    > h1 {
+      color: $Gray;
+      font-size: $Large + 15px;
+      font-weight: $Thin;
+      letter-spacing: 1px;
+      > span {
+        color: $VeryDarkBlue;
+        font-weight: $Bold;
+      }
+    }
+    > h2 {
+      color: $VeryDarkBlue;
+      font-weight: $Thin;
+      font-size: $Medium;
+      margin-top: -1.5rem;
+    }
+  }
+  // Form Styling
+  > form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    > div {
+      > input {
+        padding: 1rem;
+        width: 25rem;
+        border: 1px solid $Gray;
+        border-radius: $Large;
+      }
+      > p {
+        color: $LightRed;
+        font-size: $Small - 4px;
+        font-weight: $Thin;
+        font-style: italic;
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+    }
+    > button {
+      padding: 1rem;
+      width: 11rem;
+      background-color: $Blue;
+      border: none;
+      border-radius: $Large;
+      color: white;
+      font-weight: $SemiBold;
+      box-shadow: $PaleBlue 0px 2px 8px 0px;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  //  Dashboard Img Styling
+  > img {
+    width: 52%;
+  }
+  // Social Handles
+  > div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+    > svg {
+      color: $Blue;
+      font-size: 2rem;
+      border: 1px solid $PaleBlue;
+      padding: 6px;
+      border-radius: 50%;
+      margin: 0rem;
+      cursor: pointer;
+      &:hover {
+        background-color: $Blue;
+        color: white;
+      }
+    }
+  }
+  // Copyright Styling
+  > p {
+    margin-top: -1.5rem;
+    font-size: x-small;
+    color: $Gray;
+  }
+}
+
+// Error Handling
+.error {
+  border: 1px solid $LightRed;
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    > header {
+      > h1 {
+        font-size: $Large;
+      }
+      > h2 {
+        font-size: $Small;
+      }
+    }
+    // form
+    > form {
+      flex-direction: column;
+      > div {
+        > input {
+          width: 20rem;
+        }
+        > p {
+          margin-left: 0;
+          text-align: center;
+        }
+      }
+      > button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 280px) {
+  main {
+    header > h1 {
+      font-size: $Medium;
+    }
+    form > div > input {
+      width: 15rem;
+    }
+  }
+}
