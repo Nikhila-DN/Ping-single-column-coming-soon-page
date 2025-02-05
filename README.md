@@ -36,7 +36,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://github.com/Nikhila-DN/Ping-single-column-coming-soon-page.git
-- Live Site URL: https://cheerful-malabi-241805.netlify.app/
+- Live Site URL: https://ping-single-column-coming-soon-page-n.netlify.app/
 
 ## My process
 
